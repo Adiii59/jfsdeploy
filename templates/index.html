@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just 5 Stars</title>
+</head>
+<body>
+    <!-- Home Page -->
+    {% if page == 'home' %}
+        <p>hi</p>
+    {% endif %}
+
+
+
+    <!-- Member Page -->
+
+    {% if page == 'member' %}
+        {% if member in ['aditya', 'ayushi', 'urvashi', 'shubh', 'vishal'] %}
+            <p>{{ member | capitalize }}</p>
+        {% else %}
+            <p>No such Member</p>
+        {% endif %}
+    {% endif %}
+
+
+</body>
+</html>
