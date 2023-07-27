@@ -3,12 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Just 5 Stars</title>
 </head>
 <body>
     <!-- Home Page -->
     {% if page == 'home' %}
-        <p>hi</p>
+        <div class="home">
+            <main class="flex-shrink-0">
+                <!-- Navigation-->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container px-5">
+                        <a class="navbar-brand" href="index.html">Just 5 Stars</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Header-->
+                <header class="bg-dark py-5">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center justify-content-center">
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="my-5 text-center text-xl-start">
+                                    <h1 class="display-5 fw-bolder text-white mb-2">Just 5 Stars</h1>
+                                    <p class="lead fw-normal text-white-50 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur explicabo nostrum maiores optio a facilis quo reiciendis impedit sapiente exercitationem!</p>
+                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://www.github.com/just-5-stars">Github</a>
+                                        <a class="btn btn-outline-light btn-lg px-4" href="#!">Our Team</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{{ url_for('static', filename = 'img/org.png') }}" alt="..." /></div>
+                        </div>
+                    </div>
+                </header>
+                <!-- Features section-->
+                <section class="py-5" id="projects">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5">
+                            <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Our Projects</h2></div>
+                            <div class="col-lg-8">
+                                <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                    <div class="col mb-5 h-100">
+                                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                        <h2 class="h5">Image Caption Generator</h2>
+                                        <p class="mb-0">NLP based Image Captioning System</p>
+                                    </div>
+                                    <!-- <div class="col mb-5 h-100">
+                                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                        <h2 class="h5">Featured title</h2>
+                                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    </div> -->
+                                    <div class="col mb-5 mb-md-0 h-100">
+                                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                        <h2 class="h5">Automated Irrigation System</h2>
+                                        <p class="mb-0">An IoT System for ANN based Irrigation control system for crops.</p>
+                                    </div>
+                                    <!-- <div class="col h-100">
+                                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                        <h2 class="h5">Featured title</h2>
+                                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blog preview section-->
+                <section class="py-5" id = "team">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="text-center">
+                                    <h2 class="fw-bolder">Our Team</h2>
+                                    <p class="lead fw-normal text-muted mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-5">
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="https://avatars.githubusercontent.com/u/75912395?v=4" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">ML</div>
+                                        <a class="text-decoration-none link-dark stretched-link" href="https://github.com/shubh0614"><h5 class="card-title mb-3">Shubh Pathak</h5></a>
+                                        <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus omnis commodi vitae reprehenderit sit, error sequi hic tenetur numquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="https://media.licdn.com/dms/image/C4D03AQFYRvM3XJGMLw/profile-displayphoto-shrink_800_800/0/1639591826143?e=2147483647&v=beta&t=YWTL9mVLOMOTZXTGryKMAzHna_r-p_DVL8hopQwa7PY" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">UI/UX</div><div class="badge bg-primary bg-gradient rounded-pill mb-2">Web Development</div>
+                                        <a class="text-decoration-none link-dark stretched-link" href="https://github.com/Dark8203"><h5 class="card-title mb-3">Vishal Srivastava</h5></a>
+                                        <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus omnis commodi vitae reprehenderit sit, error sequi hic tenetur numquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="https://avatars.githubusercontent.com/u/71700207?v=4" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Web Development</div>
+                                        <a class="text-decoration-none link-dark stretched-link" href="https://ayushi200116.github.io/"><h5 class="card-title mb-3">Ayushi Indu</h5></a>
+                                        <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus omnis commodi vitae reprehenderit sit, error sequi hic tenetur numquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="https://avatars.githubusercontent.com/u/71694263?v=4" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Web Development</div>
+                                        <a class="text-decoration-none link-dark stretched-link" href="https://urvashi16.github.io/"><h5 class="card-title mb-3">Urvashi Indu</h5></a>
+                                        <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus omnis commodi vitae reprehenderit sit, error sequi hic tenetur numquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="col-lg-4 mb-5">
+                                <div class="card h-100 shadow border-0">
+                                    <img class="card-img-top" src="https://adityarags.github.io/assets/images/my-avatar.png" alt="..." />
+                                    <div class="card-body p-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">ML</div>
+                                        <a class="text-decoration-none link-dark stretched-link" href="https://adityarags.github.io/"><h5 class="card-title mb-3">Aditya R</h5></a>
+                                        <p class="card-text mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus omnis commodi vitae reprehenderit sit, error sequi hic tenetur numquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer-->
+            <footer class="bg-dark py-4 mt-auto">
+                <div class="container px-5">
+                    <center>
+                        <div class="row align-items-center justify-content-center flex-column flex-sm-row">
+                            <div class="col-auto"><div class="small m-0 text-white">Built with &#10084;&#65039;  Just5Stars 2023</div></div>
+                        </div>
+                    </center>
+                </div>
+            </footer>
+        </div>
     {% endif %}
 
 
@@ -22,6 +175,10 @@
             <p>No such Member</p>
         {% endif %}
     {% endif %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
