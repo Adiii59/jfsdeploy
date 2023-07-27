@@ -7,6 +7,4 @@ def create_app():
     return app
 
 app = create_app()
-if __name__ == "__main__":
-    from application.controllers import *
-    app.run(debug = True)
+from application.controllers import *
